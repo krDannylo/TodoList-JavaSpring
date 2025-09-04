@@ -1,4 +1,4 @@
-# Todo List Application (WIP)
+# Todo List Application
 
 ## Descrição
 
@@ -8,8 +8,8 @@ Este é um projeto de aplicação de lista de tarefas (todo list) desenvolvido e
 
 O código está organizado em pacotes de acordo com a funcionalidade:
 
-* `todoList.user`: pacote que contém as classes relacionadas ao usuário, incluindo a entidade `UserModel`.
-* `todoList`: pacote que contém as classes principais da aplicação, incluindo a classe `TodoListApplication`.
+* `br.com.krdannylo.todoList.user`: pacote que contém as classes relacionadas ao usuário, incluindo a entidade `UserModel`.
+* `br.com.krdannylo.todoList`: pacote que contém as classes principais da aplicação, incluindo a classe `TodoListApplication`.
 
 ## Dependências e Bibliotecas
 
@@ -26,15 +26,19 @@ Para executar o projeto, é necessário ter o Maven instalado e configurado. Em 
 
 ## Endpoints
 
-A aplicação expõe os seguintes endpoints:
+A aplicação expõe o seguinte endpoint:
 
 * `POST /users`: cria um novo usuário
 
 ## Modelo de Dados
 
-O modelo de dados é composto por uma única entidade `UserModel`, que tem as seguintes propriedades:
+O modelo de dados é composto pela entidade `UserModel`, que tem as seguintes propriedades:
 
 * `id`: identificador único do usuário (gerado automaticamente)
 * `name`: nome do usuário
 * `username`: username do usuário
 * `password`: senha do usuário
+
+## Autenticação e Autorização
+
+A aplicação utiliza a biblioteca BCrypt para hash e verificar senhas. Além disso, a aplicação também utiliza a anotação `@Autowired` para injetar dependências.
