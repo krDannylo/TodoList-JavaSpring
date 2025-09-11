@@ -20,8 +20,8 @@ public class UserModel {
   private UUID id;
 
   // @Column(name = "usuario")
-  @Column(unique = true)
   private String name;
+  @Column(unique = true)
   private String username;
   private String password;
 
